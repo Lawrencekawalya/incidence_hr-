@@ -28,6 +28,12 @@
     <link rel="stylesheet" href="{{ asset('theme/plugins/daterangepicker/daterangepicker.css') }}" />
     <!-- summernote -->
     <link rel="stylesheet" href="{{ asset('theme/plugins/summernote/summernote-bs4.min.css') }}" />
+    <!-- DataTables -->
+    <link rel="stylesheet" href="{{ asset('theme/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('theme/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
+    <!-- DataTables Buttons -->
+    <link rel="stylesheet" href="{{ asset('theme/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
+
     @yield('header')
 </head>
 
@@ -96,10 +102,10 @@
     <!-- ChartJS -->
     <script src="{{ asset('theme/plugins/chart.js/Chart.min.js') }}"></script>
     <!-- Sparkline -->
-    <script src="{{ asset('theme/plugins/sparklines/sparkline.js') }}"></script>
+    {{-- <script src="{{ asset('theme/plugins/sparklines/sparkline.js') }}"></script> --}}
     <!-- JQVMap -->
-    <script src="{{ asset('theme/plugins/jqvmap/jquery.vmap.min.js') }}"></script>
-    <script src="{{ asset('theme/plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script>
+    {{-- <script src="{{ asset('theme/plugins/jqvmap/jquery.vmap.min.js') }}"></script> --}}
+    {{-- <script src="{{ asset('theme/plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script> --}}
     <!-- jQuery Knob Chart -->
     <script src="{{ asset('theme/plugins/jquery-knob/jquery.knob.min.js') }}"></script>
     <!-- daterangepicker -->
@@ -116,8 +122,24 @@
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('theme/dist/js/demo.js') }}"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="{{ asset('theme/dist/js/pages/dashboard.js') }}"></script>
-    @yield('javascript')
+    {{-- <script src="{{ asset('theme/dist/js/pages/dashboard.js') }}"></script> --}}
+    <!-- DataTables  & Plugins -->
+    <script src="{{ asset('theme/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('theme/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('theme/plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
+    <script src="{{ asset('theme/plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
+    <!-- DataTables Buttons & Plugins -->
+    <script src="{{ asset('theme/plugins/datatables-buttons/js/dataTables.buttons.min.js') }}"></script>
+    <script src="{{ asset('theme/plugins/datatables-buttons/js/buttons.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('theme/plugins/jszip/jszip.min.js') }}"></script>
+    <script src="{{ asset('theme/plugins/pdfmake/pdfmake.min.js') }}"></script>
+    <script src="{{ asset('theme/plugins/pdfmake/vfs_fonts.js') }}"></script>
+    <script src="{{ asset('theme/plugins/datatables-buttons/js/buttons.html5.min.js') }}"></script>
+    <script src="{{ asset('theme/plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
+    <script src="{{ asset('theme/plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
+
+    {{-- @yield('javascript') --}}
+    @stack('scripts')
 </body>
 
 </html>
